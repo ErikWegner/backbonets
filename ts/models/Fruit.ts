@@ -1,4 +1,5 @@
-/// <reference path="../DefinitelyTyped/backbone/backbone.d.ts" />
+
+/// <reference path="../../DefinitelyTyped/backbone/backbone.d.ts" />
 
 import Backbone = require("backbone")
 

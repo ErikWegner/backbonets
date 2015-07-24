@@ -1,10 +1,17 @@
 Backbone app written in TypeScript
 ==================================
 
+Compilation
+-----------
+
+`tsc --module amd -w ts/*.ts``
+
+
 bower.json
 ----------
 
 Definition of required JavaScript libraries. Download the files with `bower install`.
+
 
 tsconfig.json
 -------------

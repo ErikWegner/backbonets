@@ -1,4 +1,4 @@
-/// <reference path="../DefinitelyTyped/backbone/backbone.d.ts" />
+/// <reference path="../../DefinitelyTyped/backbone/backbone.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -15,3 +15,4 @@ define(["require", "exports", "backbone"], function (require, exports, Backbone)
     })(Backbone.Model);
     return Fruit;
 });
+//# sourceMappingURL=Fruit.js.map
