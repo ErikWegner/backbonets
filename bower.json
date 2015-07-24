@@ -1,0 +1,21 @@
+{
+  "name": "Backbone-Typescript",
+  "version": "1.0.0",
+  "authors": [
+    "Erik Wegner <e_wegner@web.de>"
+  ],
+  "description": "Backbone app written in TypeScript",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4"
+  }
+}
