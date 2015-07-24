@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-define(["require", "exports", "backbone"], function (require, exports, Backbone) {
+define(["require", "exports", "backbone", 'views/ItemView'], function (require, exports, Backbone, ItemView) {
     var MasterView = (function (_super) {
         __extends(MasterView, _super);
         function MasterView() {
@@ -14,6 +14,10 @@ define(["require", "exports", "backbone"], function (require, exports, Backbone)
                 tagName: 'ul'
             });
         }
+        MasterView.prototype.addOne = function (element) {
+            var itemview = new ItemView(element);
+            this.$el.append(itemview.render().el);
+        };
         return MasterView;
     })(Backbone.View);
     return MasterView;

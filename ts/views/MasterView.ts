@@ -2,6 +2,7 @@
 
 import Backbone = require("backbone")
 import Fruit = require('../models/Fruit')
+import ItemView = require('views/ItemView')
 
 class MasterView extends Backbone.View<Fruit> {
   constructor() {
@@ -10,6 +11,11 @@ class MasterView extends Backbone.View<Fruit> {
       tagName: 'ul'
     });
   }
+  addOne(element: Fruit) {
+    var itemview = new ItemView(element)
+    this.$el.append(itemview.render().el);
+  }
 }
+
 
 export = MasterView

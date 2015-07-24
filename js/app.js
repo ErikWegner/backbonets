@@ -1,14 +1,10 @@
-define(["require", "exports", "models/Fruit", "views/MasterView", "views/ItemView", "jquery", "backbone"], function (require, exports, Fruit, MasterView, ItemView, $) {
+define(["require", "exports", "models/Fruit", "collections/FruitItems", "views/MasterView", "jquery", "backbone"], function (require, exports, Fruit, FruitItems, MasterView, $) {
     var masterview = new MasterView();
     $('body').append(masterview.$el);
-    var d = [];
-    d.push(new Fruit({ id: 17, title: 'Apfel' }));
-    d.push(new Fruit({ id: 23, title: 'Birne' }));
-    d.push(new Fruit({ id: 42, title: 'Orange' }));
-    _.each(d, function (element, index, list) {
-        var itemview = new ItemView();
-        itemview.initialize({ data: element });
-        masterview.$el.append(itemview.render().el);
-    });
+    var items = new FruitItems();
+    masterview.listenTo(items, "add", masterview.addOne);
+    items.add(new Fruit({ id: 17, title: 'Apfel' }));
+    items.add(new Fruit({ id: 23, title: 'Birne' }));
+    items.add(new Fruit({ id: 42, title: 'Orange' }));
 });
 //# sourceMappingURL=app.js.map
