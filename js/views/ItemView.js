@@ -11,19 +11,36 @@ define(["require", "exports", "backbone"], function (require, exports, Backbone)
         function ItemView(fruit) {
             _super.call(this, {
                 className: 'backboneitem',
-                tagName: 'li'
+                tagName: 'tr',
+                model: fruit
             });
             this.initialize(fruit);
         }
+        ItemView.prototype.events = function () {
+            return {
+                "click .delete": "clickOnDelete",
+                "click .edit": "clickOnEdit"
+            };
+        };
         ItemView.prototype.initialize = function (fruit) {
-            this.template = _.template('<a href' + '="show?' + 'ID=<%= id %>"><%= title %></a>');
-            if (fruit) {
-                this.data = fruit;
-            }
+            this.template = _.template('<td><span class="edit">✏</span></td><td><span class="show"><%= title %></span></td><td><span class="delete">✗</span></td>');
+            this.listenTo(this.model, "remove", this.remove);
+            this.listenTo(this.model, "change:title", this.render);
         };
         ItemView.prototype.render = function () {
-            this.$el.html(this.template(this.data.toJSON()));
+            this.$el.html(this.template(this.model.toJSON()));
             return this;
+        };
+        ItemView.prototype.clickOnDelete = function () {
+            if (confirm("Remove " + this.model.get("title") + "?")) {
+                this.model.collection.remove(this.model);
+            }
+        };
+        ItemView.prototype.clickOnEdit = function () {
+            var newtitle = prompt("New title", this.model.get("title"));
+            if (newtitle != null && newtitle != "") {
+                this.model.set("title", newtitle);
+            }
         };
         return ItemView;
     })(Backbone.View);

@@ -11,7 +11,7 @@ define(["require", "exports", "backbone", 'views/ItemView'], function (require, 
         function MasterView() {
             _super.call(this, {
                 className: 'masterview',
-                tagName: 'ul'
+                tagName: 'table'
             });
         }
         MasterView.prototype.addOne = function (element) {

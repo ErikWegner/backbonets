@@ -8,7 +8,7 @@ class MasterView extends Backbone.View<Fruit> {
   constructor() {
     super({
       className: 'masterview',
-      tagName: 'ul'
+      tagName: 'table'
     });
   }
   addOne(element: Fruit) {

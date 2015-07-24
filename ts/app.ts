@@ -8,9 +8,19 @@ import ItemView = require("views/ItemView")
 import $ = require("jquery")
 
 var masterview = new MasterView()
-$('body').append(masterview.$el);
-
 var items = new FruitItems();
+
+var bbadd = function() {
+    var title = prompt("Neuer Titel?");
+    if (title != "" && title != null) {
+      items.add(new Fruit({ id: (new Date).getTime(), title: title}));
+    }
+}
+
+var addLink = $('<a href="javascript:void(0);">+</a>')
+addLink.on('click', bbadd);
+$('body').append(masterview.$el).append(addLink);
+
 masterview.listenTo(items, "add", masterview.addOne);
 
 items.add(new Fruit({ id: 17, title: 'Apfel'}))
