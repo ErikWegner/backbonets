@@ -3,11 +3,40 @@
 <head>
 <title>Backbone Tutorial</title>
 <!-- run bower to download scripts -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/underscore/underscore-min.js"></script>
-<script src="bower_components/backbone/backbone-min.js"></script>
+  <script src="bower_components/requirejs/require.js"></script>
+  <script>
+  require.config({
+    
+	paths: {
+		backbone: 'bower_components/backbone/backbone-min',
+		jquery: 'bower_components/jquery/dist/jquery.min',
+		underscore: 'bower_components/underscore/underscore-min',
+        app: 'ts/app'
+	},
+	
+	shim: {
+          'backbone': {
+            //These script dependencies should be loaded before loading
+            //backbone.js
+            deps: ['underscore', 'jquery'],
+            //Once loaded, use the global 'Backbone' as the
+            //module value.
+            exports: 'Backbone'
+          },
+          'underscore': {
+              exports: '_'
+          },
+          jquery: {
+              exports: '$'
+          },
+    },
+    
+    skipDataMain: true
+  })
+  
+  require(['app']);
+  </script>
 </head>
 <body>
- 
 </body>
 </html>

@@ -1,0 +1,10 @@
+{
+  "name": "Backbone-Typescript",
+  "version": "1.0.0",
+  "description": "Backbone app written in TypeScript",
+  "author": "Erik Wegner <e_wegner@web.de>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^1.5.3"
+  }
+}
