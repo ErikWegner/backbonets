@@ -1,16 +1,34 @@
 Backbone app written in TypeScript
 ==================================
 
-Compilation
------------
+This is a TypeScript version of the Backbone tutorial found at http://ewus.de/en/tutorials/backbone.
 
-`tsc --module amd -w --sourceMap --outDir js ts/**/*.ts ts/*.ts`
+It also features require.js (www.requirejs.org) to load the modules build by the typescript compiler.
+
+Requirements for building:
+--------------------------
+
+npm: Node Package Manager
+bower: Dependency handling for JavaScript libraries
+tsc: TypeScript compiler
 
 
-bower.json
-----------
+Building preparations:
+----------------------
 
-Definition of required JavaScript libraries. Download the files with `bower install`.
+Run the following commands at the root directory of the project
+
+    npm install -g bower
+    npm install -g tsc
+    bower install
+
+
+Building
+--------
+
+To compile the scripts, run the following commands at the root of the project:
+
+    tsc --module amd -w --sourceMap --outDir js ts/**/*.ts ts/*.ts
 
 
 tsconfig.json

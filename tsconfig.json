@@ -19,10 +19,13 @@
         "declaration": false,
         "noImplicitAny": true,
         "removeComments": true,
-        "noLib": false
+        "noLib": false,
+        "outDir": "js",
+        "sourceMap": true
     },
     "filesGlob": [
         "./ts/*.ts",
+        "./ts/**/*.ts",
         "!./node_modules/**/*.ts"
     ]
 }
