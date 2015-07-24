@@ -1,9 +1,9 @@
 /// <reference path="../DefinitelyTyped/requirejs/require.d.ts" />
 /// <reference path="../DefinitelyTyped/jquery/jquery.d.ts" />
 /// <amd-dependency path="backbone" />
-import Fruit = require("ts/models/Fruit")
-import MasterView = require("ts/views/MasterView")
-import ItemView = require("ts/views/ItemView")
+import Fruit = require("models/Fruit")
+import MasterView = require("views/MasterView")
+import ItemView = require("views/ItemView")
 import $ = require("jquery")
 
 var masterview = new MasterView()

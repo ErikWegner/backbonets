@@ -1,0 +1,1 @@
+{"version":3,"file":"MasterView.js","sourceRoot":"","sources":["../../ts/views/MasterView.ts"],"names":["MasterView","MasterView.constructor"],"mappings":"AAAA,qEAAqE;;;;;;;;IAKrE;QAAyBA,8BAAoBA;QAC3CA;YACEC,kBAAMA;gBACJA,SAASA,EAAEA,YAAYA;gBACvBA,OAAOA,EAAEA,IAAIA;aACdA,CAACA,CAACA;QACLA,CAACA;QACHD,iBAACA;IAADA,CAACA,AAPD,EAAyB,QAAQ,CAAC,IAAI,EAOrC;IAEkB,AAAnB,OAAS,UAAU,CAAA"}

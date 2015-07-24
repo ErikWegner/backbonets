@@ -1,4 +1,4 @@
-define(["require", "exports", "ts/models/Fruit", "ts/views/MasterView", "ts/views/ItemView", "jquery", "backbone"], function (require, exports, Fruit, MasterView, ItemView, $) {
+define(["require", "exports", "models/Fruit", "views/MasterView", "views/ItemView", "jquery", "backbone"], function (require, exports, Fruit, MasterView, ItemView, $) {
     var masterview = new MasterView();
     $('body').append(masterview.$el);
     var d = [];

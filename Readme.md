@@ -4,7 +4,7 @@ Backbone app written in TypeScript
 Compilation
 -----------
 
-`tsc --module amd -w ts/*.ts``
+`tsc --module amd -w --sourceMap --outDir js ts/**/*.ts ts/*.ts`
 
 
 bower.json

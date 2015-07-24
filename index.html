@@ -6,12 +6,13 @@
   <script src="bower_components/requirejs/require.js"></script>
   <script>
   require.config({
+    baseUrl: 'js',
     
 	paths: {
-		backbone: 'bower_components/backbone/backbone-min',
-		jquery: 'bower_components/jquery/dist/jquery.min',
-		underscore: 'bower_components/underscore/underscore-min',
-        app: 'ts/app'
+		backbone: '../bower_components/backbone/backbone-min',
+		jquery: '../bower_components/jquery/dist/jquery.min',
+		underscore: '../bower_components/underscore/underscore-min',
+        app: 'app'
 	},
 	
 	shim: {
