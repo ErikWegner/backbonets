@@ -35,15 +35,15 @@ class ItemView extends Backbone.View<Fruit> {
   }
 
   clickOnDelete() {
-    if (confirm("Remove " + this.model.get("title") + "?")) {
+    if (confirm("Remove " + this.model.get_title() + "?")) {
       this.model.collection.remove(this.model);
     }
   }
   
   clickOnEdit() {
-    var newtitle = prompt("New title", this.model.get("title"));
+    var newtitle = prompt("New title", this.model.get_title());
     if (newtitle != null && newtitle != "") {
-      this.model.set("title", newtitle);
+      this.model.set_title(newtitle);
     }
   }
 }

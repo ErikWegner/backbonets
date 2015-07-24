@@ -11,6 +11,12 @@ define(["require", "exports", "backbone"], function (require, exports, Backbone)
         function Fruit() {
             _super.apply(this, arguments);
         }
+        Fruit.prototype.get_title = function () {
+            return this.get("title");
+        };
+        Fruit.prototype.set_title = function (title) {
+            this.set("title", title);
+        };
         return Fruit;
     })(Backbone.Model);
     return Fruit;
