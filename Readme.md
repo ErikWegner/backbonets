@@ -8,9 +8,9 @@ It also features require.js (www.requirejs.org) to load the modules build by the
 Requirements for building:
 --------------------------
 
-npm: Node Package Manager
-bower: Dependency handling for JavaScript libraries
-tsc: TypeScript compiler
+- npm: Node Package Manager
+- bower: Dependency handling for JavaScript libraries
+- tsc: TypeScript compiler
 
 
 Building preparations:
