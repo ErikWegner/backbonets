@@ -1,5 +1,5 @@
 {
-	"formatCodeOptions": {
+    "formatCodeOptions": {
         "indentSize": 2,
         "tabSize": 2,
         "newLineCharacter": "\r\n",
@@ -27,5 +27,12 @@
         "./ts/*.ts",
         "./ts/**/*.ts",
         "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./ts/app.ts",
+        "./ts/collections/FruitItems.ts",
+        "./ts/models/Fruit.ts",
+        "./ts/views/ItemView.ts",
+        "./ts/views/MasterView.ts"
     ]
 }

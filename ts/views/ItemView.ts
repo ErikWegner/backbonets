@@ -5,7 +5,7 @@ import Fruit = require('../models/Fruit')
 
 class ItemView extends Backbone.View<Fruit> {
   template: (...data: any[]) => string
-  
+
   constructor(fruit: Fruit) {
     super({
       className: 'backboneitem',
@@ -14,17 +14,17 @@ class ItemView extends Backbone.View<Fruit> {
     });
     this.initialize(fruit);
   }
-  
+
   events() {
     return {
      "click .delete": "clickOnDelete",
      "click .edit"  : "clickOnEdit"
     };
   }
-  
+
   initialize(fruit?: any) {
     this.template = _.template('<td><span class="edit">✏</span></td><td><span class="show"><%= title %></span></td><td><span class="delete">✗</span></td>')
-    
+
     this.listenTo(this.model, "remove", this.remove);
     this.listenTo(this.model, "change:title", this.render);
   }
@@ -39,7 +39,7 @@ class ItemView extends Backbone.View<Fruit> {
       this.model.collection.remove(this.model);
     }
   }
-  
+
   clickOnEdit() {
     var newtitle = prompt("New title", this.model.get_title());
     if (newtitle != null && newtitle != "") {
